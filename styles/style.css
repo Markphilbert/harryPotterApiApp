@@ -1,0 +1,148 @@
+body {
+  font-family: Poppins;
+  background-color: #f2f2f2;
+}
+
+#mainContent {
+  border-radius: 10px;
+  border: 1px solid white;
+  width: 40%;
+  height: 60vh;
+  background-color: #ffffff;
+  overflow: scroll;
+  margin: auto;
+  margin-top: 10%;
+  -webkit-box-shadow: 0 1.5px 1.5px 2px #80808040;
+          box-shadow: 0 1.5px 1.5px 2px #80808040;
+}
+
+#mainContent::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#studentContainer {
+  list-style-type: none;
+}
+
+.user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.user .pic {
+  border: thin solid white;
+  border-radius: 50%;
+  height: 160px;
+  width: 120px;
+  margin: 20px 20px 10px 20px;
+}
+
+.user section {
+  float: right;
+}
+
+.toggle {
+  display: none;
+}
+
+.option {
+  position: relative;
+}
+
+.title,
+.content {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.title {
+  background: #ffffff00;
+  display: block;
+  color: black;
+  font-weight: bold;
+}
+
+.title:after {
+  content: "\002B";
+  position: relative;
+  right: -630px;
+  top: -185px;
+  font-size: 30px;
+  color: gray;
+  background-color: white;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.title:before {
+  content: '\002D';
+  position: relative;
+  right: -648px;
+  top: -185px;
+  font-size: 30px;
+  color: gray;
+  background-color: white;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.content {
+  margin-left: 179px;
+  margin-top: -80px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  max-height: 0px;
+  -webkit-transition: max-height 0.1s;
+  transition: max-height 0.1s;
+}
+
+.toggle:checked + .title + .content {
+  max-height: 500px;
+}
+
+.toggle:checked + .title:after {
+  opacity: 0;
+}
+
+.user h2 {
+  text-transform: uppercase;
+}
+
+.user p {
+  padding: 2px;
+  margin: 0;
+}
+
+#searchbar {
+  width: 100%;
+  font-size: 18px;
+  font-weight: lighter;
+  padding: 15px 0 4px 10px;
+  border: none;
+  border-bottom: thin solid lightgray;
+}
+
+#searchbar:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 1250px) {
+  .pic {
+    display: none;
+  }
+  .user section {
+    float: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
