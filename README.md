@@ -9,4 +9,4 @@ JavaScript
 SASS/CSS
 HTML
 
-This project is hosted on Netlify
+This project is not being hosted.
